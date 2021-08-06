@@ -1,0 +1,39 @@
+{
+    "name": "burovoordeboeg/wp-base-theme",
+    "description": "Empty WordPress base theme with Gutenberg support built in",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "jstreuper",
+            "email": "justin@burovoordeboeg.nl"
+        }
+    ],
+    "require": {
+        "burovoordeboeg/wp-theme-class": "^0.5.1",
+        "burovoordeboeg/wp-gutenberg-class": "^0.2.0",
+        "composer/installers": "^1.0",
+        "satispress/gravityforms": "*",
+        "satispress/advanced-custom-fields-pro": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer", 
+            "url": "https://repo.packagist.com/burovoordeboeg/"
+        },
+        {
+            "packagist.org": false
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.burovoordeboeg.nl/satispress/"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+          "../../plugins/{$name}/": [
+              "type:wordpress-plugin"
+            ]
+        }
+    }
+}
