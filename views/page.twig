@@ -11,5 +11,9 @@
 {% extends "base/base.twig" %}
 
 {% block content %}
-	{{page.content|raw}}
+	<div class="prose">
+		{{page.content|raw}}
+
+		<button class="bg-green-100 px-5 py-2">hallo</button>
+	</div>
 {% endblock %}

@@ -21,7 +21,7 @@
     },
     "homepage": "GITHUBURL#readme",
     "devDependencies": {
-        "autoprefixer": "^9.7.6",
+        "autoprefixer": "^10.3.1",
         "browser-sync": "^2.26.13",
         "del": "^3.0.0",
         "fs": "0.0.1-security",
@@ -31,15 +31,21 @@
         "gulp-eslint": "^5.0.0",
         "gulp-imagemin": "^5.0.3",
         "gulp-notify": "^3.2.0",
-        "gulp-postcss": "^8.0.0",
+        "gulp-postcss": "^9.0.0",
         "gulp-sass": "^4.1.0",
         "gulp-uglify": "^3.0.1",
         "imagemin": "^6.1.0",
         "npm-version": "^1.1.0",
         "path": "^0.12.7",
-        "run-sequence": "^2.2.1"
+        "postcss": "^8.3.6",
+        "run-sequence": "^2.2.1",
+        "tailwindcss": "^2.2.7"
     },
     "dependencies": {
+        "@tailwindcss/aspect-ratio": "^0.2.1",
+        "@tailwindcss/forms": "^0.3.3",
+        "@tailwindcss/line-clamp": "^0.2.1",
+        "@tailwindcss/typography": "^0.4.1",
         "eslint": "^7.4.0",
         "gulp": "^4.0.2",
         "gulp-sass-lint": "^1.4.0",
