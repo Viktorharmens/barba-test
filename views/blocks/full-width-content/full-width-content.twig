@@ -1,0 +1,23 @@
+{# 
+    ====================================================================
+    Name:           full-width-content.twig
+    Type:           Block 
+    Since:          0.0.1
+    Description:    A full-width content block. 
+    Available vars: id (of block), classes (of block), {fields by key}, site
+    ====================================================================
+#}
+
+
+<div class="block block--full-content">
+	<div class="container">
+		<div>
+			{% include "partials/heading.twig" %}
+			{% if content %}
+				<div class="prose md:prose-lg mt-4 max-w-none">
+					{{content|raw}}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

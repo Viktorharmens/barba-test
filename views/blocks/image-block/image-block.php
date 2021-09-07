@@ -8,8 +8,8 @@
 	 * See the readme: 
 	 */
 	$gutenberg->registerBlock( array(
-		'name' => 'example-block',
-		'title' => 'Example block',
+		'name' => 'image-block',
+		'title' => 'Image Block',
 		'description' => 'This is an example block',
 		'category' => 'formatting',
 		'icon' => 'admin-comments',
@@ -17,7 +17,7 @@
 		'post_types' => array( 'post', 'page' ),
 		'mode' => 'preview',
 		'align' => array( 'center', 'wide', 'full' ),
-		'default_align' => 'center',
+		'default_align' => 'wide',
 		'multiple' => true,
 	), array(
 		'frontend' => array(
@@ -26,7 +26,7 @@
 		),
 		'admin' => array(
 			'style' => 'back-end.css',
+			'script' => 'scripts.js'
 		)
 	) );
-
 ?>

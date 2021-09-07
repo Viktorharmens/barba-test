@@ -2,6 +2,40 @@
 
     {{ site.wp_footer() }}
 
+    <script type="text/javascript">
+    
+        // const animationEnter = (container) => {
+        //     return gsap.from(container, { autoAlpha: 0, duration: 0.4, clearProps: 'all', ease: 'none'});
+        // }
+
+        const animationEnter = (container) => {
+            $('.color-block-top').slideUp();
+            $('.color-block-bottom').slideUp();
+            return gsap.from(container, { autoAlpha: 0, duration: 0.4, clearProps: 'all', ease: 'none'});
+        }
+
+        // const animationLeave = (container) => {
+        //     return gsap.to(container, { autoAlpha: 0, duration: 0.4, clearProps: 'all', ease: 'none'});
+        // }
+
+        const animationLeave = (container) => {
+            $('.color-block-top').slideDown();
+            $('.color-block-bottom').slideDown();
+            return gsap.to(container, { autoAlpha: 0, duration: 0.4, clearProps: 'all', ease: 'none'});
+        }
+
+    	barba.init({
+		transitions: [
+            {
+                leave: ({current}) => animationLeave(current.container),
+                enter({next}) {
+                    animationEnter(next.container);
+                }
+            }
+        ]
+	});
+    </script>
+
     </body>
 </html>
 {% endblock %}

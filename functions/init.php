@@ -62,8 +62,10 @@
 
 		// Enqueue scripts
 		$theme->assets->register('script', 'jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), false);
-		$theme->assets->register('script', 'plugins', get_template_directory_uri() . '/dist/js/plugins.js', array('jquery'), true);
+		// $theme->assets->register('script', 'plugins', get_template_directory_uri() . '/dist/js/plugins.js', array('jquery'), true);
 		$theme->assets->register('script', 'scripts', get_template_directory_uri() . '/dist/js/scripts.js', array('jquery'), true);
+		$theme->assets->register('script', 'barba', 'https://unpkg.com/@barba/core', array(), false);
+		$theme->assets->register('script', 'GSAP', 'https://unpkg.com/gsap@latest/dist/gsap.min.js', array(), false);
 
 		// Enqueue styles
 		$theme->assets->register('style', 'global', get_template_directory_uri() . '/dist/css/styles.css', array(), false);
@@ -89,14 +91,17 @@
 		$gutenberg->loadBlockJSON();
 
 		// Set the allowed blocks
+		$gutenberg->setAllowedBlock('acf/content-columns');
+		$gutenberg->setAllowedBlock('acf/image-block');
+		$gutenberg->setAllowedBlock('acf/full-width-content');
 		$gutenberg->setAllowedBlock('gravityforms/form');
 
 		// Or use an array:
 		// $gutenberg->setAllowedBlocks(
 		// 	array(
-    //     'acf/example-block',
+    	//     'acf/example-block',
 
-    //     // Gravity forms
+		//     // Gravity forms
 		// 		'gravityforms/form'
 		// 	)
 		// );

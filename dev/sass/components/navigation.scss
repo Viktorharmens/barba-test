@@ -1,0 +1,7 @@
+.mainmenu {
+	@apply flex justify-between;
+
+	&__item {
+		@apply w-auto mx-5;
+	}
+}

@@ -11,9 +11,11 @@
 {% extends "base/base.twig" %}
 
 {% block content %}
-	<div class="prose">
-		{{page.content|raw}}
 
-		<button class="bg-green-100 px-5 py-2">hallo</button>
-	</div>
+
+    <h1 class="text-4xl font-bold">{{page.title|raw}}<h1>
+
+    {{page.content|raw}}
+
+
 {% endblock %}

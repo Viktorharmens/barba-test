@@ -8,6 +8,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         {{ site.wp_head() }}
     </head>
-    <body {{ site.body_class() }}>
+
+    <body {{ site.body_class() }} data-barba="wrapper">
+
+        <header class="w-4/6 mx-auto mt-0 mb-6 py-6 px-4 bg-gray-300">
+            {% include "base/navigation.twig" %}
+        </header>
 
 {% endblock %}

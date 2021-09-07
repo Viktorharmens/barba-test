@@ -1,0 +1,27 @@
+{# 
+    ====================================================================
+    Name:           image-block.twig
+    Type:           Block 
+    Since:          0.0.1
+    Description:    A image block block. 
+    Available vars: id (of block), classes (of block), {fields by key}, site
+    ====================================================================
+#}
+
+
+<div class="block block--image-block mt-10">
+	<div class="container max-w-6xl">
+		<div class="lg:flex ">
+			<div class="h-full w-full">
+				<div>
+					{% if image %}
+						<img class="border-none w-full" src="{{image.url}}" alt="{{image.alt ? image.alt : image.title}}">
+					{% else %}
+						<img class="border-none w-full" src="https://picsum.photos/799/634" alt="Placeholder afbeelding">
+					{% endif %}
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
