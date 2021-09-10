@@ -1,0 +1,23 @@
+{# 
+    ====================================================================
+    Name:           media.twig
+    Type:           Block 
+    Since:          0.0.1
+    Description:    An image grid block
+    Available vars: id (of block), classes (of block), {fields by key}, site
+    ====================================================================
+#}
+
+{# <pre>{{ dump() }}</pre> #}
+	<div class="container {{containerClass}}">
+
+		<div class="js-media-slider">
+			{% for item in images %}
+			{# <pre>{{ dump(image) }}</pre> #}
+				<div class="cursor-move cursor">
+					<img class="object-cover" src="{{ item.image.sizes.large }}" title="{{ item.image.title }}" alt="{{ (item.image.alt)? item.image.alt : item.image.title }}"/>
+				</div>
+			{% endfor %}
+		</div>
+		
+</div>

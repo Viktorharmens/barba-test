@@ -3,25 +3,18 @@
     {{ site.wp_footer() }}
 
     <script type="text/javascript">
-    
-        // const animationEnter = (container) => {
-        //     return gsap.from(container, { autoAlpha: 0, duration: 0.4, clearProps: 'all', ease: 'none'});
-        // }
 
         const animationEnter = (container) => {
-            $('.color-block-top').slideUp();
-            $('.color-block-bottom').slideUp();
-            return gsap.from(container, { autoAlpha: 0, duration: 0.4, clearProps: 'all', ease: 'none'});
+            gsap.to('.color-block-top', {height: "0", duration: 0.3})
+            gsap.to('.color-block-bottom', {height: "0", duration: 0.3})
+            return gsap.from(container, { autoAlpha: 0, duration: 0.5, clearProps: 'all', ease: 'none'});
+            playSlider();
         }
 
-        // const animationLeave = (container) => {
-        //     return gsap.to(container, { autoAlpha: 0, duration: 0.4, clearProps: 'all', ease: 'none'});
-        // }
-
         const animationLeave = (container) => {
-            $('.color-block-top').slideDown();
-            $('.color-block-bottom').slideDown();
-            return gsap.to(container, { autoAlpha: 0, duration: 0.4, clearProps: 'all', ease: 'none'});
+            gsap.to('.color-block-top', {height: "50%", duration: 0.3})
+            gsap.to('.color-block-bottom', {height: "50%", duration: 0.3})
+            return gsap.to(container, { autoAlpha: 0, duration: 0.5, clearProps: 'all', ease: 'none'});
         }
 
     	barba.init({
@@ -31,9 +24,10 @@
                 enter({next}) {
                     animationEnter(next.container);
                 }
-            }
+        }
         ]
 	});
+
     </script>
 
     </body>

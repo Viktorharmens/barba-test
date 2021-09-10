@@ -62,12 +62,13 @@
 
 		// Enqueue scripts
 		$theme->assets->register('script', 'jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), false);
-		// $theme->assets->register('script', 'plugins', get_template_directory_uri() . '/dist/js/plugins.js', array('jquery'), true);
+		$theme->assets->register('script', 'plugins', get_template_directory_uri() . '/dist/js/plugins.js', array('jquery'), true);
 		$theme->assets->register('script', 'scripts', get_template_directory_uri() . '/dist/js/scripts.js', array('jquery'), true);
 		$theme->assets->register('script', 'barba', 'https://unpkg.com/@barba/core', array(), false);
 		$theme->assets->register('script', 'GSAP', 'https://unpkg.com/gsap@latest/dist/gsap.min.js', array(), false);
 
 		// Enqueue styles
+		$theme->assets->register('style', 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), false);
 		$theme->assets->register('style', 'global', get_template_directory_uri() . '/dist/css/styles.css', array(), false);
 
 		// Localize scripts
@@ -94,6 +95,7 @@
 		$gutenberg->setAllowedBlock('acf/content-columns');
 		$gutenberg->setAllowedBlock('acf/image-block');
 		$gutenberg->setAllowedBlock('acf/full-width-content');
+		$gutenberg->setAllowedBlock('acf/media');
 		$gutenberg->setAllowedBlock('gravityforms/form');
 
 		// Or use an array:

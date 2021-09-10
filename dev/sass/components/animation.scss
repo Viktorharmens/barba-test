@@ -1,7 +1,7 @@
 .color-block-top {
   background: red;
-  display: none;
-  height: 50%;
+  display: block;
+  height: 0;
   left: 0;
   position: fixed;
   right: 0;
@@ -13,8 +13,8 @@
 .color-block-bottom {
   background: red;
   bottom: 0;
-  display: none;
-  height: 50%;
+  display: block;
+  height: 0;
   left: 0;
   position: fixed;
   right: 0;
