@@ -4,11 +4,24 @@
 
     <script type="text/javascript">
 
+    function playSlider() {
+
+        if ($('.js-media-slider').length) {
+            $('.js-media-slider').not('.slick-initialized').slick({
+                arrows: false,
+                dots: false,
+                speed: 500,
+                autoplay: true
+                });
+            }
+        };
+
+        playSlider();
+
         const animationEnter = (container) => {
             gsap.to('.color-block-top', {height: "0", duration: 0.3})
             gsap.to('.color-block-bottom', {height: "0", duration: 0.3})
             return gsap.from(container, { autoAlpha: 0, duration: 0.5, clearProps: 'all', ease: 'none'});
-            playSlider();
         }
 
         const animationLeave = (container) => {
@@ -23,6 +36,7 @@
                 leave: ({current}) => animationLeave(current.container),
                 enter({next}) {
                     animationEnter(next.container);
+                    playSlider();
                 }
         }
         ]
